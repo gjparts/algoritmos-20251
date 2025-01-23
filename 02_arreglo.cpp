@@ -44,6 +44,34 @@ int main(){
 		cout << arreglo1[i] << endl;
 	}
 	
+	//imprimir arreglo2
+	cout << "Valores almacenados en arreglo2:" << endl;
+	for(int i = 0; i < 5; i++){
+		cout << arreglo2[i] << endl;
+	}
+	
+	//conocer el tamaño de un arreglo
+	//primero hay que conocer las posiciones inicial y final en memoria:
+	cout << "Posicion inicial de arreglo2: " << begin(arreglo2) << endl; 
+	cout << "Posicion final de arreglo2: " << end(arreglo2) << endl;
+	cout << "Cantidad de elementos en arreglo2: " << end(arreglo2)-begin(arreglo2) << endl;
+	
+	float arreglo3[] = { 3.1416, 2.56677, 6.8, 1, 0.2344, 0.00002 };
+	cout << "Valores almacenados en arreglo3:" << endl;
+	for(int i = 0; i < end(arreglo3)-begin(arreglo3); i++){
+		cout << arreglo3[i] << endl;
+	}
+	//el resultado de end-begin se puede almacenar en una variable int o long
+	double arreglo4[] = { 3.44444, 5.333333, 8, 9, 1.565445, 2.22222, 0.015 };
+	int tamanio4 = end(arreglo4)-begin(arreglo4);
+	cout << "Valores almacenados en arreglo4:" << endl;
+	for(int i = 0; i < tamanio4; i++){
+		cout << arreglo4[i] << endl;
+	}
+	/*no olvide que para poder usar begin y end su compilador debe estar configurado
+	a partir de la version 11 de C++, en el caso de devCpp debe agregar el parametro
+	-std=c++11 en las opciones del compilador.*/
+	
 	return 777;
 }
 
