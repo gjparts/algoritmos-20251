@@ -27,7 +27,24 @@ int main(){
 	}
 	
 	//forma 2: declarar arreglo prellenado
-	int arreglo2[][] = {};
+	//importante: es obligatorio colocar el tamaño de arreglo secundario
+	//en este caso tengo 6 numeros para cada arreglo secundario.
+	int arreglo2[][6] = {
+		{1, 3, 6, 2, -8, 9},
+		{6, 5, 7, -1, 1, 0},
+		{10, 30, 12, 22, 45, 777},
+		{100, 300, 60, -12, 0, 12}
+	};
+	
+	cout << "*******************************" << endl;
+	for( int i = 0; i < end(arreglo2)-begin(arreglo2); i++ ){
+		//ahora recorrer cada elemento del arreglo secundario (columnas)
+		for( int j = 0; j < end(arreglo2[i])-begin(arreglo2[i]); j++ ){
+			//imprimir el j-esimo valor dentro del i-esimo arreglo
+			cout << arreglo2[i][j] << "\t";
+		}
+		cout << endl; //pasar al siguiente renglon
+	}
 	
 	return 111;
 }
