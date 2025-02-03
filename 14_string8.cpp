@@ -12,8 +12,13 @@ int main(){
 	cout << "Digite un numero entero: ";
 	cin >> numero;
 	cout << "Digite un string: ";
+	//cuando viene de leer un numero con cin y desea leer un string
+	//debera vaciar al buffer de entrada ejecutando:
+	cin.ignore();
 	getline(cin,str);
 	
 	cout << "El valor de numero es: " << numero << endl;
 	cout << "El valor de str es: " << str << endl;
+	
+	return 777;
 }
