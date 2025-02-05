@@ -48,6 +48,29 @@ int main(){
 	frutas[5] = frutas[5] + 's';
 	cout << "La fruta 5 es " << frutas[5] << endl;
 	
+	/*Ejercicio: hacer un arreglo de string que tenga los siguientes colores:
+	verde, gris, azul, rojo , rosa, amarillo
+	luego hacer una rutina que altere cada color agregando un ASTERISCO
+	entre cada caracter de cada una de los colores por ultimo
+	imprimir dicho arreglo*/
+	string colores[] = {"verde", "gris", "azul", "rojo", "rosa", "amarillo"};
+	//recorrer el arreglo principal, color por colro
+	cout << "*****************************************" << endl;
+	for( int i = 0; i < end(colores)-begin(colores); i++ ){
+		//sacar una copia del color actual
+		string copia = colores[i];
+		//vaciar el color actual en el arreglo
+		colores[i] = "";
+		//recorrer la copia caracter por caracter e ir pasando
+		//cada caracter al color actual en el arreglo y poner un
+		//asterisco luego de cada caracter
+		for( int j = 0; j < copia.length(); j++ ){
+			colores[i] = colores[i]+copia[j]+'*';
+		}
+		//imprimir el color actual ya alterado
+		cout << colores[i] << endl;
+	}
+	
 	return 654;
 }
 
