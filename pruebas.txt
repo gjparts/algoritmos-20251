@@ -1,0 +1,12 @@
+Hola UNAH
+4
+El valor de x es 3.1416
+Rojo	Amarillo	Azul
+Hola UNAH
+4
+El valor de x es 3.1416
+Rojo	Amarillo	Azul
+Hola UNAH
+4
+El valor de x es 3.1416
+Rojo	Amarillo	Azul
