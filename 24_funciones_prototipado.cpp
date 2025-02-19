@@ -1,16 +1,4 @@
-#include<iostream>
-using namespace std;
-
-//prototipos de funcion
-int sumar(int a, int b);
-long sumar(long a, long b);
-int sumar(int a, int b, int c);
-double sumar(double a, double b, double c);
-float sumar(float a, float b, float c);
-bool esPar(int numero);
-
-int main(){
-	/*Funciones en c++
+/*Funciones en c++
 	permiten la reutilizacion de codigo por medio del
 	llamado de las mismas.
 	Puntos importantes a conocer:
@@ -31,6 +19,18 @@ int main(){
 	y despues de main() se hace la implementacion de las funciones.
 	Esto con el objetivo de tener un catalogo de funciones para leerse
 	antes de comenzar a leer todo el programa.*/
+#include<iostream>
+using namespace std;
+
+//prototipos de funcion
+int sumar(int a, int b);
+long sumar(long a, long b);
+int sumar(int a, int b, int c);
+double sumar(double a, double b, double c);
+float sumar(float a, float b, float c);
+bool esPar(int numero);
+
+int main(){
 	cout << sumar(4,5) << endl;
 	cout << sumar(5L, 8L) << endl;
 	cout << sumar(3, 5, 7) << endl;
