@@ -70,7 +70,16 @@ int main(){
 				cout << "Archivo no existe o no tiene permiso" << endl;
 		}
 		if( opcion == 3 ){
-			
+			cout << "******** BORRAR EL DIARIO ********" << endl;
+			cout << "Importante: esta accion es irreversible." << endl;
+			cout << "Desea borrar el diario? S = Si, N = No: ";
+			string respuesta;
+			getline(cin,respuesta);
+			if( respuesta == "S" || respuesta == "s" ){
+				archivo.open("diario.txt",ios::out);
+				archivo.close();
+				cout << "Archivo Borrado Correctamente" << endl;
+			}
 		}
 		
 		system("pause"); //hacer una pausa
