@@ -1,5 +1,10 @@
 #include<iostream>
 #include<stdexcept>
+//lo siguiente permite a math.h o cmath
+//incluir las constantes de matematicas
+//como PI, logaritmos y demas.
+//IMPORTANTE: esto va antes de incluir math.h o cmath
+#define _USE_MATH_DEFINES
 #include<cmath>
 using namespace std;
 
@@ -42,10 +47,24 @@ bool esMultiplo( int a, int b ){
 dicha funcion recibira como parametros el ancho y largo del mismo
 asi como otro parametro con el caracter a usar para dibujar
 dicho rectangulo.*/
-
-
-
-
+void imprimirRectangulo(int ancho, int largo, char caracter){
+	for( int i = 1; i <= largo; i++ ){
+		for( int j = 1; j <= ancho; j++ ){
+			cout << caracter;
+		}
+		cout << endl;
+	}
+}
+/*5. Hacer una funcion que retorne el area de un circulo,
+dicha funcion debera recibir el radio como parametro.
+Usando sobrecarga de funciones haga que la funcion pueda
+trabajar con numeros double o con numeros float.*/
+double areaCirculo(double radio){
+	return M_PI*pow(radio,2);
+}
+float areaCirculo(float radio){
+	return M_PI*pow(radio,2);
+}
 
 
 

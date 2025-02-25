@@ -30,5 +30,36 @@ int main(){
 	algo += ( 20 > 100 );
 	cout << "algo: " << algo << endl;
 	
+	/*Las funciones void no retornan valor alguno; por lo tanto
+	no se pueden asignar a variables o a flujos de salida:*/
+	//cout << imprimirRectangulo(4,5,'*') << endl;
+	//string cuadro = imprimirRectangulo(4,5,'*');
+	//lo correcto es solo mandarlas a llamar:
+	imprimirRectangulo(4,5,'*');
+	imprimirRectangulo(8,8,'x');
+	
+	/*C++ infiere el tipo de dato de acuerdo a si lleva decimales o no.
+	Si no lleva decimales se considera como int
+	Si lleva decimales se considera double
+	Si lleva decimales y una letra f al final se considera float
+	Si no lleva decimales y le pone una L al final se considera long*/
+	cout << areaCirculo(45.0) << endl;
+	cout << areaCirculo(45.0f) << endl;
+	
+	//pero si almacena los valores en variables; entonces
+	//la deteccion del tipo la da el tipo de dato de la variable
+	//por eso note que al asignar f1 no fue necesario poner la f
+	float f1 = 5;
+	cout << areaCirculo(f1) << endl;
+	double d1 = 8;
+	cout << areaCirculo(d1) << endl;
+	
+	
 	return 34567;
 }
+
+
+
+
+
+
