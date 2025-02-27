@@ -54,6 +54,13 @@ int main(){
 	double d1 = 8;
 	cout << areaCirculo(d1) << endl;
 	
+	cout << minimo(5.4, 2.2, 3.4567) << endl;
+	cout << minimo(7, 4, 1) << endl;
+	cout << minimo(6.3f, 7.4f, 8.2f) << endl;
+	
+	cout << estaEnMayusculas("baleada") << endl;
+	cout << estaEnMayusculas("REFRESCO") << endl;
+	cout << estaEnMayusculas("UniversidaD") << endl;
 	
 	return 34567;
 }

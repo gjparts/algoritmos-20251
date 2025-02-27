@@ -1,11 +1,13 @@
 #include<iostream>
 #include<stdexcept>
+
 //lo siguiente permite a math.h o cmath
 //incluir las constantes de matematicas
 //como PI, logaritmos y demas.
 //IMPORTANTE: esto va antes de incluir math.h o cmath
 #define _USE_MATH_DEFINES
 #include<cmath>
+#include<algorithm>
 using namespace std;
 
 /*1. Escriba una funcion llamada elevar que reciba dos numeros enteros,
@@ -65,6 +67,52 @@ double areaCirculo(double radio){
 float areaCirculo(float radio){
 	return M_PI*pow(radio,2);
 }
+/*6. Escriba una función llamada minimo que retorne
+el menor de tres números, dicha funcion debera poder
+funcionar con tres numeros enteros o con
+tres numeros double o tres numeros float*/
+/*Para optimizar la sobrecarga de funciones y no repetir el mismo
+codigo varias veces, se identifica la funcion con el tipo de mayor precision
+y esa sera la funcion original, las demas sobrecargas la van a reutilizar.*/
+
+//double es el de mayor precision
+double minimo(double a, double b, double c){
+	if( a <= b && a <= c ) return a;
+	if( b <= a && b <= c ) return b;
+	if( c <= a && c <= b ) return c;
+}
+int minimo(int a, int b, int c){
+	//pasar los parametros al tipo de dato de la funcion original
+	double x = a, y = b, z = c;
+	return minimo(x,y,z); //mandar a llamar a la funcion original
+}
+float minimo(float a, float b, float c){
+	//pasar los parametros al tipo de dato de la funcion original
+	double x = a, y = b, z = c;
+	return minimo(x,y,z); //mandar a llamar a la funcion original
+}
+
+/*7. Escriba una funcion que devuelva true si una cadena
+de texto esta escrita toda en mayusculas o false si no es así.*/
+bool estaEnMayusculas(string str){
+	//comparar a str con su version en mayusculas
+	string copia = str;
+	transform(copia.begin(), copia.end(), copia.begin(), ::toupper);
+	/*if( str == copia )
+		return true;
+	else
+		return false;*/
+	return ( str == copia ? true : false );
+}
+
+/*8. Escriba una funcion a la cual se le proporcione como
+parametros un caracter y una cadena de texto, dicha funcion
+debera devolver un entero con la posicion de la primer coincidencia
+en la que fue encontrado el caracter proporcionado dentro de
+la cadena de texto proporcionada, si el caracter no es
+encontrado entonces devolver -1.
+No tiene permitido utilizar la funcion find del string.*/
+
 
 
 
