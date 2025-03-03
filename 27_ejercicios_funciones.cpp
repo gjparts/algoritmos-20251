@@ -62,6 +62,21 @@ int main(){
 	cout << estaEnMayusculas("REFRESCO") << endl;
 	cout << estaEnMayusculas("UniversidaD") << endl;
 	
+	cout << encontrar('a',"manzana") << endl;
+	cout << encontrar('a',"kiwi") << endl;
+	cout << encontrar('s',"pera") << endl;
+	cout << encontrar('A',"pera") << endl;
+	cout << encontrar('a',"pera") << endl;
+	cout << encontrar('i',"mandarina") << endl;
+	
+	cout << "****************************" << endl;
+	string frutas[] = { "Pera", "Manzana", "uva", "manzana", "sandia", "kiwi" };
+	cout << buscarStringEnArreglo("uva",frutas,end(frutas)-begin(frutas)) << endl;
+	cout << buscarStringEnArreglo("pera",frutas,end(frutas)-begin(frutas)) << endl;
+	cout << buscarStringEnArreglo("Pera",frutas,end(frutas)-begin(frutas)) << endl;
+	cout << buscarStringEnArreglo("kiwi",frutas,end(frutas)-begin(frutas)) << endl;
+	cout << buscarStringEnArreglo("SANDIA",frutas,end(frutas)-begin(frutas)) << endl;
+	
 	return 34567;
 }
 
