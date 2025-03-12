@@ -14,7 +14,50 @@ int main(){
 	//instanciar un nuevo objeto de clase Persona
 	//observe que per1 es una variable apuntada
 	Persona *per1 = new Persona();
+	//direccion de memoria de per1
+	cout << per1 << endl;
+	//informacion guardada en los atributos de per1
+	cout << "informacion en per1: *************" << endl;
+	cout << "nombre: " << per1->nombre << endl;
+	cout << "edad: " << per1->edad << endl;
+	cout << "genero: " << per1->genero << endl;
+	cout << "dni: " << per1->dni << endl;
 	
+	//es posible cambiar los valores de los atributos publicos:
+	per1->nombre = "Gerardo";
+	per1->edad = 42;
+	per1->genero = 'M';
+	per1->dni = "1234123412345";
+	
+	//informacion actualizada en los atributos de per1
+	cout << "informacion en per1: *************" << endl;
+	cout << "nombre: " << per1->nombre << endl;
+	cout << "edad: " << per1->edad << endl;
+	cout << "genero: " << per1->genero << endl;
+	cout << "dni: " << per1->dni << endl;
+	
+	//prueba de constructor con dos parametros
+	Persona *per2 = new Persona("Josue",11);
+	cout << "informacion en per2: *************" << endl;
+	cout << "nombre: " << per2->nombre << endl;
+	cout << "edad: " << per2->edad << endl;
+	cout << "genero: " << per2->genero << endl;
+	cout << "dni: " << per2->dni << endl;
+	
+	//prueba de constructor con cuatro parametros
+	Persona *per3 = new Persona("Viena",16,'F',"0000111122222");
+	cout << "informacion en per3: *************" << endl;
+	cout << "nombre: " << per3->nombre << endl;
+	cout << "edad: " << per3->edad << endl;
+	cout << "genero: " << per3->genero << endl;
+	cout << "dni: " << per3->dni << endl;
 	
 	return 123;
 }
+
+
+
+
+
+
+
