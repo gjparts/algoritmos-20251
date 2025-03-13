@@ -52,6 +52,21 @@ int main(){
 	cout << "genero: " << per3->genero << endl;
 	cout << "dni: " << per3->dni << endl;
 	
+	//uso de los metodos
+	per1->saludar();
+	per1->imprimir();
+	per2->saludar();
+	per2->imprimir();
+	per3->saludar();
+	per3->imprimir();
+	
+	cout << "per1, es de la tercera edad? " << per1->esTerceraEdad() << endl;
+	cout << "per2, es de la tercera edad? " << per2->esTerceraEdad() << endl;
+	cout << "per3, es de la tercera edad? " << per3->esTerceraEdad() << endl;
+	
+	Persona *per4 = new Persona("Filomeno Colinas",71,'M',"00000000");
+	cout << "per4, es de la tercera edad? " << per4->esTerceraEdad() << endl;
+	
 	return 123;
 }
 

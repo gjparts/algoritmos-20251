@@ -53,7 +53,31 @@ class Persona{
 			this->genero = genero;
 			this->dni = dni;
 		}
-		
+		//metodos
+		void saludar(){
+			cout << "Hola me llamo " << this->nombre << endl;
+		}
+		void imprimir(){
+			cout << "****** Perfil ****** " << endl;
+			cout << "Nombre: " << this->nombre << endl;
+			cout << "Edad: " << this->edad << endl;
+			cout << "Genero: " << this->getGeneroDescripcion() << endl;
+			cout << "DNI: " << this->dni << endl;
+		}
+		bool esTerceraEdad(){
+			//devuelve true si es de la tercera edad, sino devuelve false
+			if( this->edad >= 60 )
+				return true;
+			else
+				return false;
+		}
+		string getGeneroDescripcion(){
+			if( this->genero == 'M' ) return "Masculino";
+			if( this->genero == 'F' ) return "Femenino";
+			if( this->genero == 'X' ) return "Otros";
+			//si llego aqui no se cumplio ninguna de las condiciones anteriores
+			return "No configurado en el programa";
+		}
 }; //este punto y coma es obligatorio
 
 #endif
