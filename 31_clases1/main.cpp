@@ -8,6 +8,8 @@
    el archivo main*/
 #include<iostream>
 #include "Persona.h"
+#include "Mascota.h"
+#include "Carro.h"
 using namespace std;
 
 int main(){
@@ -66,6 +68,19 @@ int main(){
 	
 	Persona *per4 = new Persona("Filomeno Colinas",71,'M',"00000000");
 	cout << "per4, es de la tercera edad? " << per4->esTerceraEdad() << endl;
+	
+	Mascota *m1 = new Mascota();
+	m1->imprimir();
+	Mascota *m2 = new Mascota("Rambo","Perro",3,'M',true);
+	m2->imprimir();
+	Mascota *m3 = new Mascota("Tinieblas","Gato",1);
+	m3->imprimir();
+	
+	Carro *car1 = new Carro("Kia","Sorento","Negro",2016);
+	//anio no es accesible desde fuera de la clase
+	//car1->anio = 2020;
+	//cout << car1->anio << endl;
+	car1->imprimir();
 	
 	return 123;
 }
