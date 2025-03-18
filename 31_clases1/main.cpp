@@ -76,11 +76,18 @@ int main(){
 	Mascota *m3 = new Mascota("Tinieblas","Gato",1);
 	m3->imprimir();
 	
-	Carro *car1 = new Carro("Kia","Sorento","Negro",2016);
+	Carro *car1 = new Carro("Kia","Sorento","Negro",2012);
 	//anio no es accesible desde fuera de la clase
 	//car1->anio = 2020;
 	//cout << car1->anio << endl;
+	
+	car1->setAnio(2020); //escribir el anio de car1 por medio del metodo set
+	cout << "ano de car1: " << car1->getAnio() << endl;
+	
 	car1->imprimir();
+	
+	//prueba de la guard clause:
+	//car1->setAnio(1994);
 	
 	return 123;
 }
