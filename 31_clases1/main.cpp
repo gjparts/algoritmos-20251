@@ -10,6 +10,7 @@
 #include "Persona.h"
 #include "Mascota.h"
 #include "Carro.h"
+#include "CuentaAhorro.h"
 using namespace std;
 
 int main(){
@@ -88,6 +89,15 @@ int main(){
 	
 	//prueba de la guard clause:
 	//car1->setAnio(1994);
+	
+	CuentaAhorro *ch1 = new CuentaAhorro("Gerardo","12345637");
+	cout << "Saldo en ch1: " << ch1->getSaldo() << endl;
+	ch1->depositar(5000);
+	cout << "Saldo en ch1: " << ch1->getSaldo() << endl;
+	ch1->retirar(1000);
+	cout << "Saldo en ch1: " << ch1->getSaldo() << endl;
+	ch1->retirar(4000);
+	cout << "Saldo en ch1: " << ch1->getSaldo() << endl;
 	
 	return 123;
 }
