@@ -65,10 +65,45 @@ class ListaSimple{
 			//se termino el recorrido
 			cout << "NULL" << endl; //imprimo el letrero NULL
 		}
-		
+		//metodo para recuperar un Nodo en determinada posicion
+		Nodo *get(int pos){
+			//guard clauses: pos no puede ser negativo y pos no debe superar al
+			//numero de Nodos
+			if( pos < 0 )
+				throw invalid_argument("Posicion a obtener no debe ser negativa");
+			else
+				if( pos > this->length-1 )
+					throw invalid_argument("Posicion a obtener no existe");
+				else{
+					//Algoritmo de recorrido
+					Nodo *tmp = this->first; //comenzamos en el primer Nodo
+					int posicionActual = 0; //contador de saltos
+					
+					while( tmp != NULL ){
+						//si el salto actual es igual a la posicion deseada
+						//entonces retornamos el Nodo en que nos encontramos
+						if( posicionActual == pos )
+							return tmp;
+						
+						tmp = tmp->next; //pasar al siguiente Nodo
+						posicionActual++; //sumar 1 al contador de saltos
+					}
+				}
+		}
+		//metodo para cambiarle el valor a un Nodo en determinada posicion
+		void set(int pos, string value){
+			//recuperar el Nodo en la posicion pos
+			//y cambiarle su valor por el nuevo value
+			this->get(pos)->value = value;
+		}
 };
 
 #endif
+
+
+
+
+
 
 
 

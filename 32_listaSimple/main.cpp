@@ -20,5 +20,24 @@ int main(){
 	
 	lista1->print();
 	
+	//pruebas del metodo get
+	cout << "Valor del Nodo en la posicion 2: " << lista1->get(2)->value << endl;
+	cout << "Valor del Nodo en la posicion 1: " << lista1->get(1)->value << endl;
+	//cout << "Valor del Nodo en la posicion -1: " << lista1->get(-1)->value << endl;
+	//cout << "Valor del Nodo en la posicion 50: " << lista1->get(50)->value << endl;
+	
+	//pruebas del metodo set
+	lista1->set(2,"mandarina");
+	lista1->set(4,"toronja");
+	//lista1->set(-9,"777");
+	lista1->print();
+	
 	return 777;
 }
+
+
+
+
+
+
+
