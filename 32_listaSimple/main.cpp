@@ -32,6 +32,20 @@ int main(){
 	//lista1->set(-9,"777");
 	lista1->print();
 	
+	//prueba del metodo pop
+	lista1->pop(0);
+	lista1->print();
+	lista1->pop(0);
+	lista1->print();
+	lista1->pop(0);
+	lista1->print();
+	lista1->pop(0);
+	lista1->print();
+	cout << lista1->getFirst()->value;
+	cout << lista1->getLast()->value;
+	lista1->pop(0);
+	lista1->print();
+	
 	return 777;
 }
 

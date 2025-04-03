@@ -96,6 +96,43 @@ class ListaSimple{
 			//y cambiarle su valor por el nuevo value
 			this->get(pos)->value = value;
 		}
+		//metodo para eliminar un Nodo de la lista
+		Nodo *pop(int pos){
+			//guard clause: si no hay Nodos entonces dar excepcion
+			if( this->length == 0 )
+				throw invalid_argument("No hay nodos para eliminar.");
+			else{
+				//1) apuntar borrar al Nodo a eliminar
+				Nodo *borrar = this->get(pos);
+				//2) si borrar es igual a first:
+				if( borrar == this->first )
+					//a) first apunta al next de first:
+					this->first = this->first->next;
+				else{
+					//sino: a) apuntamos anterior al Nodo con posicion-1
+					Nodo *anterior = this->get(pos-1);
+					//apuntar el next de anterior al next de borrar
+					anterior->next = borrar->next;
+				}
+				//3) si borrar es igual a last entonces:
+				if( borrar == this->last )
+					//*) si first es igual a NULL entonces:
+					if( this->first == NULL )
+						//last apunta a NULL
+						this->last = NULL;
+					else{
+						//apuntar last a anterior
+						Nodo *anterior = this->get(pos-1);
+						this->last = anterior;
+					}
+				//4) apuntar a NULL el next de borrar
+				borrar->next = NULL;
+				//5) restar 1 a length
+				this->length--;
+				//6) retornar el Nodo eliminado
+				return borrar;
+			}
+		}
 };
 
 #endif
