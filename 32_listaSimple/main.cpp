@@ -35,16 +35,31 @@ int main(){
 	//prueba del metodo pop
 	lista1->pop(0);
 	lista1->print();
-	lista1->pop(0);
+	
+	lista1->pop(2);
 	lista1->print();
-	lista1->pop(0);
+	
+	lista1->pop(2);
 	lista1->print();
-	lista1->pop(0);
+	
+	cout << "Primero: " << lista1->getFirst()->value << endl;
+	cout << "Ultimo: " << lista1->getLast()->value << endl;
+	
+	//agregar mas Nodos
+	lista1->push("rojo");
+	lista1->push("amarillo");
+	lista1->push("Verde");
+	lista1->push("Azul");
+	lista1->push("naranja");
+	lista1->push("saturno");
+	lista1->push("tierra");
 	lista1->print();
-	cout << lista1->getFirst()->value;
-	cout << lista1->getLast()->value;
-	lista1->pop(0);
-	lista1->print();
+	
+	cout << "saturno esta en la posicion: " << lista1->find("saturno") << endl;
+	cout << "verde esta en la posicion: " << lista1->find("verde") << endl;
+	cout << "Verde esta en la posicion: " << lista1->find("Verde") << endl;
+	cout << "rojo esta en la posicion: " << lista1->find("rojo") << endl;
+	cout << "7 esta en la posicion: " << lista1->find("7") << endl;
 	
 	return 777;
 }

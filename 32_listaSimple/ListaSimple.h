@@ -133,6 +133,24 @@ class ListaSimple{
 				return borrar;
 			}
 		}
+		//metodo find para buscar un Nodo de acuerdo a su valor
+		//devuelve la posicion de la primer coincidencia encontrada
+		//si no encuentra nada entonces devuelve -1
+		int find(string buscado){
+			//este metodo es mas eficiente con el algoritmo de recorrido
+			//no se recomienda hacer este metodo usando get y for porque no es eficiente
+			Nodo *tmp = this->first;
+			int posicion = 0;
+			while( tmp != NULL ){
+				if( tmp->value == buscado ) //si el valor del Nodo actual es igual al buscado...
+					return posicion;				//...entonces retornamos dicho Nodo
+				
+				tmp = tmp->next; //pasar al siguiente Nodo
+				posicion++; //sumar 1 a posicion
+			}
+			//si llego aqui entonces no encontro nada
+			return -1;
+		}
 };
 
 #endif
