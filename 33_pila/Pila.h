@@ -34,7 +34,7 @@ class Pila{
 			nuevo->next = this->top;
 			//3) top apuntarlo a nuevo
 			this->top = nuevo;
-			//4) sumar 2 a length
+			//4) sumar 1 a length
 			this->length++;
 		}
 		//metodo print: imprime la Pila en pantalla
