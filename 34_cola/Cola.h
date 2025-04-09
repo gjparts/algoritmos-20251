@@ -76,10 +76,8 @@ class Cola{
 				//hacer return de extraer
 				return extraer;
 			}
-			else{
-				throw length_error("No hay mas Nodos en Cola");
+			else
 				return NULL;
-			}
 		}
 };
 
